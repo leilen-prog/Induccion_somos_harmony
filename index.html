@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Somos Harmony · Inducción de Nuevos Colaboradores</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ TOP BAR ============ -->
+  <div id="topbar">
+    <div class="brand">
+      <img src="assets/badge_somos_harmony.png" alt="Harmony Projects">
+      <span>Somos Harmony</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="icon">⭐</span><span id="topbar-points">0</span> pts</div>
+      <div class="progress-shell"><div class="progress-fill" id="topbar-progress-fill" style="width:0%"></div></div>
+      <div class="stat" id="topbar-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- ============ SCREEN: IDENTIFICACIÓN (obligatoria) ============ -->
+  <section id="screen-namegate" class="screen">
+    <div class="intro-welcome">
+      <div class="intro-inner">
+        <img class="wordmark" src="assets/wordmark_harmony_projects.png" alt="Harmony Projects">
+        <h1>Antes de comenzar...</h1>
+        <p>Necesitamos identificarte para registrar tu progreso y resultados de la inducción.</p>
+        <div class="card" style="text-align:left; color:var(--ink); margin-top:18px;">
+          <div class="eyebrow">Identificación obligatoria</div>
+          <label style="display:block; font-weight:700; font-size:.85rem; margin-bottom:6px; color:var(--green-deep);">Nombre completo *</label>
+          <input type="text" id="gate-name-input" placeholder="Ej. Leilen Rodríguez" style="width:100%; padding:12px 14px; border-radius:10px; border:2px solid var(--cream-2); font-family:'Inter',sans-serif; font-size:.95rem; margin-bottom:14px;">
+          <label style="display:block; font-weight:700; font-size:.85rem; margin-bottom:6px; color:var(--green-deep);">Puesto / Área (opcional)</label>
+          <input type="text" id="gate-role-input" placeholder="Ej. Recepción, Harmony Hotel" style="width:100%; padding:12px 14px; border-radius:10px; border:2px solid var(--cream-2); font-family:'Inter',sans-serif; font-size:.95rem;">
+          <p id="gate-error" style="display:none; color:#b95c50; font-weight:700; font-size:.85rem; margin-top:10px;">Por favor escribe tu nombre completo para continuar.</p>
+        </div>
+        <div class="btn-row">
+          <button class="btn gold" id="btn-confirm-name">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCREEN: WELCOME ============ -->
+  <section id="screen-welcome" class="screen">
+    <div class="intro-welcome">
+      <div class="intro-inner">
+        <img class="wordmark" src="assets/wordmark_harmony_projects.png" alt="Harmony Projects">
+        <h1 id="welcome-title">¡Bienvenidos a Somos Harmony!</h1>
+        <p>Nos emociona tenerte en el equipo. En Harmony Projects, cada día es una oportunidad para inspirar, conectar y crecer juntos bajo nuestra filosofía de <strong>Hospitalidad Radical</strong>.</p>
+        <p>Este curso está diseñado como una misión por niveles: recorre la historia, esencia y ecosistema de Harmony, supera cada reto, gana insignias y certifícate como parte del equipo.</p>
+        <div class="btn-row">
+          <button class="btn gold" id="btn-start-mission">Comenzar mi misión 🚀</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCREEN: MAPA DE MISIÓN ============ -->
+  <section id="screen-map" class="screen">
+    <div class="map-header">
+      <div class="kicker">Tu misión</div>
+      <h1>Mapa de Harmony</h1>
+      <p>Completa cada nivel en orden para desbloquear el siguiente. Gana puntos, insignias y llega a tu certificación "Somos Harmony".</p>
+    </div>
+    <div class="mission-map">
+      <div class="map-nodes" id="map-nodes"></div>
+    </div>
+    <div class="badges-shelf" id="badges-shelf"></div>
+  </section>
+
+  <!-- ============ SCREEN: NIVEL ============ -->
+  <section id="screen-level" class="screen">
+    <div class="level-hero" id="level-hero">
+      <div class="level-hero-inner">
+        <button class="back-btn" id="btn-back-map">← Mapa de misión</button>
+        <div class="kicker" id="level-kicker"></div>
+        <h1 id="level-title"></h1>
+      </div>
+    </div>
+    <div class="level-body">
+      <div class="step-dots" id="step-dots"></div>
+      <div id="level-body"></div>
+    </div>
+  </section>
+
+  <!-- ============ SCREEN: CERTIFICADO ============ -->
+  <section id="screen-cert" class="screen">
+    <div class="cert-wrap">
+      <div class="cert-card">
+        <img class="stamp" src="assets/badge_somos_harmony.png" alt="Somos Harmony">
+        <div id="cert-form">
+          <h1>¡Estás a un paso de tu certificación!</h1>
+          <p>Tu certificado se generará a nombre de:</p>
+          <div class="cert-name" id="cert-name-preview" style="font-size:1.4rem;"></div>
+          <div class="btn-row">
+            <button class="btn gold" id="btn-generate-cert">Generar mi certificado</button>
+          </div>
+        </div>
+        <div id="cert-result" style="display:none;">
+          <h1>Certificado de Inducción</h1>
+          <p>Se certifica que</p>
+          <div class="cert-name" id="cert-name-display"></div>
+          <p>ha completado exitosamente el curso de Inducción de Nuevos Colaboradores y forma parte del equipo</p>
+          <h3>Harmony Projects</h3>
+          <p class="cert-meta" id="cert-date"></p>
+          <div class="btn-row">
+            <button class="btn ghost" id="btn-print-cert">Imprimir / Guardar PDF</button>
+          </div>
+        </div>
+      </div>
+      <p class="footnote">Somos Harmony · Inducción de Nuevos Colaboradores 2026</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ BADGE POPUP ============ -->
+<div id="badge-overlay">
+  <div class="badge-modal">
+    <div class="big-em" id="badge-em">🏅</div>
+    <h3>¡Insignia desbloqueada!</h3>
+    <p id="badge-name"></p>
+    <div class="btn-row">
+      <button class="btn gold" id="badge-close">Genial</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/scorm-api.js"></script>
+<script src="js/content.js"></script>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" standalone="no" ?>
+<manifest identifier="COM.HARMONYPROJECTS.SOMOSHARMONY.2026"
+          version="1.2"
+          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+
+  <organizations default="ORG-SOMOS-HARMONY">
+    <organization identifier="ORG-SOMOS-HARMONY">
+      <title>Somos Harmony · Inducción de Nuevos Colaboradores 2026</title>
+      <item identifier="ITEM-1" identifierref="RES-1" isvisible="true">
+        <title>Somos Harmony · Curso de Inducción Gamificado</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+      </item>
+    </organization>
+  </organizations>
+
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="css/styles.css"/>
+      <file href="js/scorm-api.js"/>
+      <file href="js/content.js"/>
+      <file href="js/config.js"/>
+      <file href="js/app.js"/>
+      <file href="assets/badge_somos_harmony.png"/>
+      <file href="assets/bg_plants.jpg"/>
+      <file href="assets/founders_photo.jpg"/>
+      <file href="assets/icon_amor.png"/>
+      <file href="assets/icon_integridad.png"/>
+      <file href="assets/illustration_guia.jpg"/>
+      <file href="assets/logo_al_chile.png"/>
+      <file href="assets/logo_campo.png"/>
+      <file href="assets/logo_canu.png"/>
+      <file href="assets/logo_el_bosque.png"/>
+      <file href="assets/logo_harmony_hotel.png"/>
+      <file href="assets/logo_healing_centre.png"/>
+      <file href="assets/logo_juice_bar.png"/>
+      <file href="assets/logo_la_salita.png"/>
+      <file href="assets/logo_la_tiendita.png"/>
+      <file href="assets/logo_la_ventanita.png"/>
+      <file href="assets/logo_las_ceramicas.png"/>
+      <file href="assets/logo_sunset_shack.png"/>
+      <file href="assets/wordmark_harmony_projects.png"/>
+    </resource>
+  </resources>
+
+</manifest>
